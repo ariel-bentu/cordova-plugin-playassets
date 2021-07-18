@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-assets" version="0.2.3">
+    <name>PlayAssets</name>
+    <description>Cordova Play Assets Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,assets</keywords>
+    <js-module src="src/js/playassets.js" name="playassets">
+        <clobbers target="playassets" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PlayAssets">
+                <param name="android-package" value="bentu.playassets.PlayAssets" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/PlayAssets.java" target-dir="src/bentu/playassets/" />
+    </platform>
+</plugin>
